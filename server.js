@@ -130,9 +130,9 @@ app.get('/api/info', async (req, res) => {
 
     console.log(`[api/info] starting extraction for video ${videoId}`);
     const { stdout } = await runYtDlp([
+      '--verbose',
       '--dump-single-json',
       '--skip-download',
-      '--no-warnings',
       '--no-playlist',
       normalized.url
     ], 90000);
