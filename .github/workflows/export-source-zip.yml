@@ -14,13 +14,13 @@ jobs:
 
       - name: Verify source files exist
         run: |
-          test -f "NetWave-Android-Update-v8-MP4-Fix 2.zip"
-          test -f "netwave_icon.png"
+          test -f "NetWave-Android-Updated-v8-MP4-Fix 2.zip"
+          test -f "netwave-icon.png"
 
       - uses: actions/upload-artifact@v4
         with:
           name: NetWave-Android-Source-and-Icon
           path: |
-            NetWave-Android-Update-v8-MP4-Fix 2.zip
-            netwave_icon.png
+            NetWave-Android-Updated-v8-MP4-Fix 2.zip
+            netwave-icon.png
           retention-days: 1
