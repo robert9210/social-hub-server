@@ -1,7 +1,7 @@
 {
   "name": "social-hub-server",
-  "version": "1.1.0",
-  "description": "Social Hub authorized video download backend",
+  "version": "1.2.0",
+  "description": "Social Hub metadata and health API; direct media downloads are handled by Android DownloadManager",
   "main": "server.js",
   "scripts": { "start": "node server.js" },
   "dependencies": { "cors": "^2.8.5", "express": "^5.1.0" }
