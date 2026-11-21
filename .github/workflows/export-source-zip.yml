@@ -1,4 +1,4 @@
-name: Export Android source ZIP
+name: Export NetWave Android source ZIP
 
 on:
   workflow_dispatch:
@@ -11,8 +11,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      - name: Verify source files exist
+        run: |
+          test -f "NetWave-Android-Update-v8-MP4-Fix 2.zip"
+          test -f "netwave_icon.png"
+
       - uses: actions/upload-artifact@v4
         with:
-          name: SocialHub-Android-Letest
-          path: SocialHub-Android-Letest.zip
+          name: NetWave-Android-Source-and-Icon
+          path: |
+            NetWave-Android-Update-v8-MP4-Fix 2.zip
+            netwave_icon.png
           retention-days: 1
